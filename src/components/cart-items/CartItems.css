@@ -1,0 +1,99 @@
+.table tr {
+    border-bottom: 1px solid black;
+}
+
+.table td,
+th {
+    padding: 0.5rem;
+}
+
+.table tr td img {
+    width: 7rem;
+}
+
+.table tr td i {
+    font-size: 1.4rem;
+    color: #fa3939;
+}
+
+.table tr td i:hover {
+    transform: scale(1.15);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+/*cart summary table styling*/
+.cartTotal-promo-code {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+
+table.cart-total {
+    width: 50%;
+}
+
+.cart-total .cart-price-info {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table button {
+    padding: 12px;
+    width: 12rem;
+    border: none;
+    background-color: red;
+    border-bottom: 5px solid rgb(230, 49, 49);
+    border-right: 5px solid rgb(230, 49, 49);
+    border-radius: 1rem;
+    color: white;
+}
+
+.table button:hover {
+    background-color: rgb(215, 8, 8);
+}
+
+
+/* procode section styling*/
+.promo-code-section {
+    width: 40%;
+}
+
+.promo-code-section input {
+    padding: 0.7rem;
+    width: 60%;
+    border: none;
+    background-color: lightgrey;
+}
+
+.promo-code-section button {
+    padding: 0.7rem;
+    width: 30%;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.promo-code-section button:hover {
+    background-color: rgb(34, 33, 33);
+}
+
+@media(max-width:750px) {
+    .cartTotal-promo-code {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    table.cart-total,
+    .promo-code-section {
+        width: 90%;
+    }
+
+    .promo-code-section {
+        margin-bottom: 3rem;
+    }
+
+}

@@ -1,0 +1,48 @@
+.card{
+    width: 20rem;
+}
+
+.image-container i.add-item, div.add-remove-item{
+    float: right;
+    position: relative;
+    bottom: 2.5rem;
+    right: 1.5rem;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 5px 6px;
+ }
+
+ div.add-remove-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 5rem;
+    padding: 3px;
+}
+.remove-item{
+   color: orangered;
+    padding: 2px 3px;
+    border-radius:1rem;
+    background-color: rgb(255, 69, 0,0.3);
+}
+.add-food{
+   color:#05a305;
+    padding: 2px 3px;
+    border-radius:1rem;
+   background-color: rgb(55, 241, 55,0.3);
+}
+
+.card-body h5.price{
+color: orangered;
+}
+
+.card .card-info:hover{
+    transform: scale(1.02);
+    transition: transform 0.5s ease-in-out;
+    
+}
+.card-body:hover{
+    background-color: #403f3f;
+    transition: background-color 0.5s ease-in-out;
+    color: white;
+}

@@ -1,0 +1,150 @@
+/* navbar styling */
+nav.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
+nav.navbar div.container {
+    background-color: whitesmoke;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 3rem;
+}
+
+img.navbar-brand {
+    width: 7rem;
+}
+
+ul.navbar-nav li a:hover {
+    color: black;
+}
+
+.navbar-right button.btn {
+    border-radius: 0.8rem;
+}
+
+button.btn {
+    border: none;
+    background-color: #fe5f26;
+    box-shadow: 0 0 5px orangered;
+}
+
+button.btn:hover {
+    background-color: #f7561c;
+}
+
+.navbar-right i {
+    font-size: 1.5rem;
+    color: black;
+}
+
+.navbar-right i.fa-magnifying-glass:hover{
+    color: #f7561c;
+}
+
+.navbar-right .counter{
+    background-color: red;
+    width: 0.8rem;
+    height: 0.8rem;
+    position: relative;
+    right: 0.3rem;
+    bottom: 0.4rem;
+    }
+
+/* Default link styles */
+.nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Active link styles */
+.active-link {
+    color: orangered;
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23fe5f26' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+
+
+/* signup modal styling */
+
+.modal-body .input input {
+    box-shadow: none;
+}
+
+.modal a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* cart items offcanvas styling */
+
+.cart-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.cart-item img {
+    width: 5rem;
+}
+
+.food-qunatity {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.9rem;
+}
+
+.food-qunatity i.decre-quantity {
+    color: red;
+    padding: 2px 4px;
+    border-radius: 1rem;
+    background-color: rgb(255, 0, 0, 0.3);
+}
+
+.food-qunatity i.incre-quantity {
+    color: green;
+    padding: 2px 4px;
+    border-radius: 1rem;
+    background-color: rgb(0, 128, 0, 0.3);
+}
+
+.cart-btns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+.cart-btns button {
+    width: 10rem;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.cart-btns button:hover {
+    background-color: #413f3f;
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+}
+

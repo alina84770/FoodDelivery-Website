@@ -1,0 +1,20 @@
+.checkout {
+    gap: 8rem;
+    margin: auto;
+}
+
+form.checkout-form {
+    background:linear-gradient(45deg,#f7b63e,#f53b3b);
+    padding: 1.5rem 3rem;
+    width: 100%;
+}
+
+form input {
+    border: none;
+    outline: none;
+}
+
+.cart-total table {
+    width: 100%;
+}
+

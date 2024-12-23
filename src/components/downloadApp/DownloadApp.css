@@ -1,0 +1,25 @@
+.app-download {
+    margin: 6rem 0;
+}
+
+.apps img {
+    width: 13rem;
+    margin: 1rem 1rem 0;
+}
+
+.apps img:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+}
+
+@media(max-width:550px) {
+    
+    .app-download h2 {
+        font-size: 1.5rem;
+    }
+
+    .apps img {
+        width: 9rem;
+
+    }
+}

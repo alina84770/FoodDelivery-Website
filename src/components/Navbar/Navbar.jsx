@@ -14,7 +14,6 @@ function Navbar() {
   //handle form submission
   const clickHandler = (e) => {
     e.preventDefault();
-    reset();
     setlogin("true");
     alert("Now you can get food items.");
   }

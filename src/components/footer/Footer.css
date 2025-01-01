@@ -24,13 +24,10 @@
     border-radius: 1rem;
 }
 
-.footer-center ul,
-.footer-right ul {
-    list-style-type: none;
-}
 
-.footer-center ul li,
-.footer-right ul li {
+
+.footer-center div,
+.footer-right div {
     margin-bottom: 0.5rem;
     cursor: pointer;
 }

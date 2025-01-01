@@ -27,7 +27,7 @@ function FoodItem({ id, image, name, description, price }) {
         <div className="card" data-aos="fade-right">
           <div className='card-info'>
           <div className="image-container">
-            <img src={image} className="card-img-top" alt="..." />
+            <img loading="lazy" src={image} className="card-img-top" alt="..." />
             {cartItems[id] === 0 ?
               <i class="fa-solid fa-plus add-item" onClick={clickHandler}></i>
               : <div className='add-remove-item'>

@@ -12,6 +12,11 @@
     padding: 5px 6px;
  }
 
+ .image-container img{
+    width:16.3rem;
+    height: 11rem;
+ }
+
  div.add-remove-item{
     display: flex;
     justify-content: space-around;

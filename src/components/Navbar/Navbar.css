@@ -85,6 +85,9 @@ button.btn:hover {
     box-shadow: none;
 }
 
+.modal-body .input p{
+    font-size:0.9rem;
+}
 .modal a {
     text-decoration: none;
     cursor: pointer;

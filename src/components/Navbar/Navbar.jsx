@@ -2,21 +2,29 @@ import React, { useContext, useState } from 'react';
 import logo from '../../assets/logo.png';
 import { NavLink, Link } from 'react-router-dom';
 import './Navbar.css';
+import { useForm } from 'react-hook-form';
 import { FoodContext } from '../../context/Context';
 function Navbar() {
   const [activeLink, setactiveLink] = useState('home');
   const [userStatus, setuserStatus] = useState("signup");
+  const{register,handleSubmit,reset,formState:{errors,isSubmitting}}=useForm();
   const { cartItems, FoodItems, addToCart, removeFromCart, islogin, setlogin } = useContext(FoodContext);
 
   // Check if there are any items in the cart
   const hasItemsInCart = FoodItems.some((e) => cartItems[e.id] > 0);
 
   //handle form submission
-  const clickHandler = (e) => {
-    e.preventDefault();
+  const onsubmit = async (data) => {
+    console.log("form data is:", data);
     setlogin("true");
+    await new Promise((resolve) => {
+      setTimeout(resolve, 2000);
+    })
+    reset();
     alert("Now you can get food items.");
   }
+
+
 
   return (
     <>
@@ -72,33 +80,53 @@ function Navbar() {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h2 class="modal-title text-center">{userStatus === "signup" ? 'sign up' : "Login"}</h2>
+              <h2 class="modal-title">{userStatus === "signup" ? 'sign up' : "Login"}</h2>
               <button type="button" class="btn-close btn-success" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body ">
-              <form action="" className='form'>
+              <form action="" className='form px-4' onSubmit={handleSubmit(onsubmit)}>
 
                 {userStatus === "signup" && <div className="input form-floating mt-4">
-                  <input type="text" className='form-control' placeholder="name"/>
+                  <input type="text" {...register("fullname", {
+                    required: "name is required",
+                    minLength: { value: 5, message: "Name should be atleast 5 character long" },
+                    maxLength: { value: 20, meassage: "Name must be less than 20 characters" }
+                  })} className='form-control' placeholder="name" />
+                  {errors.fullname && <p className='text-danger'>{errors.fullname.message}</p>}
                   <label>Full Name</label>
                 </div>}
                 <div className="input form-floating  mt-4">
-                  <input type="email" className='form-control' placeholder="email"/>
+                  <input type="email" {...register("email", {
+                    required: "email is required",
+                    pattern: {
+                      value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
+                      message: "Enter a valid email address",
+                    },
+                  }
+                  )} className='form-control' placeholder="email" />
+                  {errors.email && <p className="text-danger">{errors.email.message}</p>}
                   <label>Email Id</label>
                 </div>
                 <div className="input form-floating  mt-4">
-                  <input type="password" className='form-control' placeholder="password"/>
+                  <input type="password" {...register("password", {
+                    required: "password is required",
+                    pattern: {
+                      value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                      message: "Password must include at least 8 characters, one uppercase, one lowercase, one number, and one special character"
+                    }
+                  })} className='form-control' placeholder="password" />
+                  {errors.password && <p className="text-danger">{errors.password.message}</p>}
                   <label>Password</label>
                 </div>
                 {userStatus === "signup" && <div className='mt-2'>
                   <p >If you have already account? <a className='text-success fw-bold' onClick={() => setuserStatus("login")}>login here</a></p>
                 </div>}
+                <div class="mb-2">
+                  <button className='w-100 btn btn-success py-2 fs-5 fw-bold'> {isSubmitting ? "Submitting..." : userStatus === 'signup' ? "Create Account" : "Login"}</button>
+                </div>
+                {userStatus === 'login' && <p className='ps-4 pb-3'>Create New Account? <a className='text-success fw-bold' onClick={() => setuserStatus('signup')}>click here</a></p>}
               </form>
             </div>
-            <div class="modal-footer mb-2">
-              <button className='w-100 btn btn-success py-2 fs-5 fw-bold' onClick={clickHandler}>{userStatus === 'signup' ? "Create Account" : "Login"}</button>
-            </div>
-            {userStatus === 'login' && <p className='ps-4 pb-3'>Create New Account? <a className='text-success fw-bold' onClick={() => setuserStatus('signup')}>click here</a></p>}
           </div>
         </div>
       </div>

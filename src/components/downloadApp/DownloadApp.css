@@ -4,7 +4,7 @@
 
 .apps img {
     width: 13rem;
-    margin: 1rem 1rem 0;
+    margin: 1rem 0.6rem 0;
 }
 
 .apps img:hover {
@@ -13,11 +13,10 @@
 }
 
 @media(max-width:550px) {
-    
     .app-download h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+      
     }
-
     .apps img {
         width: 9rem;
 

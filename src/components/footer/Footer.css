@@ -37,7 +37,7 @@
 
 .footer-center h4,
 .footer-right h4 {
-    margin-left: 1.7rem;
+    /* margin-left: 1.7rem; */
 }
 
 .footer hr {
@@ -52,6 +52,5 @@
 }
 
 .footer-copyright p {
-    font-size: 0.97rem;
-
+    font-size:0.75rem;
 }

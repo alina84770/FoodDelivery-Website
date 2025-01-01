@@ -20,26 +20,22 @@ function Footer() {
 
                     <div className="footer-center col-lg-3 col-md-3 col-sm-7 col-8">
                         <h4>COMPANY</h4>
-                        <ul>
-                            <li>Home</li>
-                            <li>About us</li>
-                            <li>Delivery</li>
-                            <li>Privacy Policy</li>
-                        </ul>
+                        <div>Home</div>
+                        <div>About us</div>
+                        <div>Delivery</div>
+                        <div>Privacy Policy</div>
                     </div>
 
                     <div className="footer-right col-lg-3 col-md-3 col-sm-7 col-8">
                         <h4>GET IN TOUCH</h4>
-                        <ul>
-                            <li>+1-345-678-4539</li>
-                            <li>contact@tomato.com</li>
-                        </ul>
+                        <div>+1-345-678-4539</div>
+                        <div>contact@tomato.com</div>
                     </div>
 
                 </div>
                 <hr />
                 <div className="footer-copyright d-flex justify-content-center align-items-center  py-3">
-                    <p>Copyright 2024 <span className='copyright'>&copy;</span> Tomato.com - All Right Reserved.</p>
+                    <p className='text-center'>Copyright 2024 <span className='copyright'>&copy;</span> Tomato.com - All Right Reserved.</p>
                 </div>
 
             </div>

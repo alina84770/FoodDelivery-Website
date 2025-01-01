@@ -35,11 +35,6 @@
     cursor: pointer;
 }
 
-.footer-center h4,
-.footer-right h4 {
-    /* margin-left: 1.7rem; */
-}
-
 .footer hr {
     width: 80%;
     margin: auto;

@@ -81,7 +81,7 @@ function Navbar() {
           <div class="modal-content">
             <div class="modal-header">
               <h2 class="modal-title">{userStatus === "signup" ? 'sign up' : "Login"}</h2>
-              <button type="button" class="btn-close btn-success" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body ">
               <form action="" className='form px-4' onSubmit={handleSubmit(onsubmit)}>
@@ -121,8 +121,8 @@ function Navbar() {
                 {userStatus === "signup" && <div className='mt-2'>
                   <p >If you have already account? <a className='text-success fw-bold' onClick={() => setuserStatus("login")}>login here</a></p>
                 </div>}
-                <div class="mb-2">
-                  <button className='w-100 btn btn-success py-2 fs-5 fw-bold'> {isSubmitting ? "Submitting..." : userStatus === 'signup' ? "Create Account" : "Login"}</button>
+                <div class="my-4">
+                  <button className='w-100 btn text-white  py-2 fs-5 fw-bold'> {isSubmitting ? "Submitting..." : userStatus === 'signup' ? "Create Account" : "Login"}</button>
                 </div>
                 {userStatus === 'login' && <p className='ps-4 pb-3'>Create New Account? <a className='text-success fw-bold' onClick={() => setuserStatus('signup')}>click here</a></p>}
               </form>
